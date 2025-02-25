@@ -9,7 +9,7 @@ setup(
     package_data={
         "Currencies": ["references/*.json"],     # Include JSON files in the Currencies package
     },
-    description="A utility package for handling currency operations",  # Short description
+    description="Python package built around making currency operations easier to handle.",  # Short description
     author="Kiah Jane Seki",                                           # Author's name
     author_email="kiah.jane.jones@aircash.eu",                         # Author's email
     license="MIT",                                                     # Package license
