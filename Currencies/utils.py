@@ -29,13 +29,13 @@ def build_currency_lookup(currencies: Dict, conversion_rates_version: str) -> Di
 
     logging.info("Currency lookup table successfully built.")
     return {
-        "id_to_code": dict(zip(currency_ids, currency_codes)),
-        "code_to_id": {code: id_ for id_, code in zip(currency_ids, currency_codes)},
-        "id_to_name": dict(zip(currency_ids, currency_names)),
-        "name_to_id": {name: id_ for id_, name in zip(currency_ids, currency_names)},
-        "code_to_name": dict(zip(currency_codes, currency_names)),
-        "name_to_code": {name: code for code, name in zip(currency_names, currency_codes)},
-        "id_to_conversion_rate": dict(zip(currency_ids, conversion_rates)),
-        "code_to_conversion_rate": dict(zip(currency_codes, conversion_rates)),
-        "name_to_conversion_rate": dict(zip(currency_names, conversion_rates))
+        "id_to_code": {id_: code for id_, code in zip(currency_ids, currency_codes)},
+        "code_to_id": {code: id_ for code, id_ in zip(currency_codes, currency_ids)},
+        "id_to_name": {id_: name for id_, name in zip(currency_ids, currency_names)},
+        "name_to_id": {name: id_ for name, id_ in zip(currency_names, currency_ids)},
+        "code_to_name": {code: name for code, name in zip(currency_codes, currency_names)},
+        "name_to_code": {name: code for name, code in zip(currency_names, currency_codes)},
+        "id_to_conversion_rate": {id_: rate for id_, rate in zip(currency_ids, conversion_rates)},
+        "code_to_conversion_rate": {code: rate for code, rate in zip(currency_codes, conversion_rates)},
+        "name_to_conversion_rate": {name: rate for name, rate in zip(currency_names, conversion_rates)}
     }
