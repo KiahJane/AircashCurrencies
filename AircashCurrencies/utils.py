@@ -27,7 +27,7 @@ def save_json(data, file_path):
     except Exception as e:
         logging.warning(f"Unexpected error while saving JSON to {file_path}: {e}", exc_info=True)
 
-### Utility Functions for Currencies ###
+### Utility Functions for AircashCurrencies ###
 def build_currency_lookup(currencies: Dict, conversion_rates_version: str) -> Dict[str, Dict]:
     """Builds mapping dictionaries for currency lookup."""
     if not currencies:

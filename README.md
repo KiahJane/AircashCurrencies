@@ -1,11 +1,11 @@
-# Currencies
+# AircashCurrencies
 
 ###### This Python package contains the various currencies used by Aircash.
 ###### Each currency has an ID, code, name and various conversion rates.
 ###### This package is an interface to edit and retrieve currencies used at Aircash. The currency name can be retrieved from the currency ID or currency ISO code (and vice versa). The package also enables easy access to the conversion rate needed to convert the currency into Euros (updated manually).
 
 ## Methods included in the package:
-### Methods for Accessing All Currencies
+### Methods for Accessing All AircashCurrencies
 - `load_currencies`: Returns tupled lists of currency IDs, ISO codes and names from a JSON file if it exists.
 - `currencies_by_id_asc`: Returns currencies as a dictionary sorted by currency ID in ascending order.
 - `currencies_by_iso_code_alphabetical`: Returns currencies as a dictionary sorted by currency ISO code in alphabetical order.

@@ -10,7 +10,7 @@ try:
 
     # Project Info
     PROJECT_DIR = Path(__file__).resolve().parent
-    PROJECT_NAME = "Currencies"
+    PROJECT_NAME = "AircashCurrencies"
     PYTHON_VERSION = 3.10
 
     # Data file paths

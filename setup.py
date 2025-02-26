@@ -7,13 +7,13 @@ setup(
     packages=find_packages(),         # Automatically find all packages
     include_package_data=True,        # Include non-Python files specified in MANIFEST.in
     package_data={
-        "Currencies": ["references/*.json"],     # Include JSON files in the Currencies package
+        "AircashCurrencies": ["references/*.json"],     # Include JSON files in the AircashCurrencies package
     },
     description="Python package built around making currency operations easier to handle.",  # Short description
     author="Kiah Jane Seki",                                           # Author's name
     author_email="kiah.jane.jones@aircash.eu",                         # Author's email
     license="MIT",                                                     # Package license
-    url="https://github.com/KiahJane/Currencies.git",                  # URL to the package repository (optional)
+    url="https://github.com/KiahJane/AircashCurrencies.git",                  # URL to the package repository (optional)
     install_requires=[],                                               # List of dependencies if any
     classifiers=[
         "Programming Language :: Python :: 3",

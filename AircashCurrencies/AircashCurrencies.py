@@ -8,7 +8,7 @@ from utils import load_json, build_currency_lookup, save_json
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 
-class Currencies:
+class AircashCurrencies:
     """Handles currency mappings, conversions, and lookup functions."""
 
     def __init__(self, conversion_rates_key: Union[str, None] = None):
@@ -27,7 +27,7 @@ class Currencies:
             logging.error(f"Conversion rates were not retrievable from: {self.currency_file}.")
             raise ValueError("No valid conversion rates key found in the JSON file")
 
-    ### Methods for Accessing All Currencies ###
+    ### Methods for Accessing All AircashCurrencies ###
     def load_currencies(self) -> Tuple[List[int], List[str], List[str]]:
         """Loads currencies (ID, ISO code, name) from JSON."""
         currencies = (
@@ -211,7 +211,7 @@ class Currencies:
 
 
 if __name__ == '__main__':
-    currency_handler = Currencies()
+    currency_handler = AircashCurrencies()
 
     currency_ids = [
         946,

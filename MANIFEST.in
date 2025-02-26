@@ -1,1 +1,1 @@
-include Currencies/references/*.json
+include AircashCurrencies/references/*.json
