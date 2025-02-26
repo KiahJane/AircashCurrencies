@@ -4,19 +4,30 @@ from typing import Dict
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-def load_currencies(file_path: str) -> Dict:
-    """Loads currency data from JSON, handling errors."""
+def load_json(file_path: str) -> Dict:
+    """Loads data from JSON, handling errors."""
     try:
         with open(file_path, "r", encoding="utf-8") as file:
-            logging.info(f"Loaded currencies from: {file_path}")
+            logging.info(f"Data successfully loaded from: {file_path}")
             return json.load(file)
     except FileNotFoundError:
-        logging.error(f"Currency file not found: {file_path}")
+        logging.error(f"File not found: {file_path}")
         return {}
     except json.JSONDecodeError:
         logging.error(f"Error decoding JSON file: {file_path}")
         return {}
 
+# noinspection PyTypeChecker
+def save_json(data, file_path):
+    """Saves JSON data to a file."""
+    try:
+        with open(file_path, 'w', encoding='utf-8') as file:
+            json.dump(data, file, indent=4)
+            logging.info(f"Data successfully saved to {file_path}")
+    except Exception as e:
+        logging.warning(f"Unexpected error while saving JSON to {file_path}: {e}", exc_info=True)
+
+### Utility Functions for Currencies ###
 def build_currency_lookup(currencies: Dict, conversion_rates_version: str) -> Dict[str, Dict]:
     """Builds mapping dictionaries for currency lookup."""
     if not currencies:

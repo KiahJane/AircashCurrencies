@@ -1,3 +1,4 @@
+import os
 from dotenv import load_dotenv
 from pathlib import Path
 
@@ -5,6 +6,7 @@ load_dotenv()
 
 try:
     # load environment variables from .env file
+    EXCHANGE_RATE_API_KEY = Path(os.getenv("EXCHANGE_RATE_API_KEY"))
 
     # Project Info
     PROJECT_DIR = Path(__file__).resolve().parent
